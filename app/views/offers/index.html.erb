@@ -1,4 +1,14 @@
-<h1> Les hôtels </h1>
-<% @offers.each do |hotel| %>
-    <%= hotel.name %>
-<% end %>
+<div class="container">
+    <h1> Les hôtels </h1>
+    <% @offers.each do |hotel| %>
+        <div class="card-product my-3">
+            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            <div class="card-product-infos">
+            <h2> <%= link_to hotel.name, offer_path(hotel) %> </h2>
+            <p> <%= hotel.description %> </p>
+            <p> <i class="fa-solid fa-euro-sign"></i> <%= hotel.price %> </p>
+            <p> <i class="fa-solid fa-location-dot"></i> <%= hotel.localisation %> </p>
+        </div>
+    </div>
+    <% end %>
+</div>

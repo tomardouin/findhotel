@@ -6,9 +6,9 @@
         </div>
         <div class="btn-home">
             <% if user_signed_in? %>
-            <%= link_to "Voir les hôtels", offers_path, class: "btn btn-primary"  %>
+                <%= link_to "Voir les hôtels", offers_path, class: "btn btn-primary"  %>
             <% else  %>
-            <%= link_to "Connecte-toi !", user_session_path, class: "btn btn-primary"  %>
+                <%= link_to "Connecte-toi !", user_session_path, class: "btn btn-primary"  %>
                 <%= link_to "Inscris-toi !", new_user_registration_path, class: "btn btn-primary" %>
             <% end %>
         </div>
