@@ -1,2 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="full-page">
+    <div class="home-container">
+        <div class="home-text-content">
+            <h1> FindHotel </h1>
+            <h3> Trouvez votre Hôtel au meilleur prix. </h3>
+        </div>
+        <div class="btn-home">
+            <% if user_signed_in? %>
+            <%= link_to "Voir les hôtels", offers_path, class: "btn btn-primary"  %>
+            <% else  %>
+            <%= link_to "Connecte-toi !", user_session_path, class: "btn btn-primary"  %>
+                <%= link_to "Inscris-toi !", new_user_registration_path, class: "btn btn-primary" %>
+            <% end %>
+        </div>
+    </div>
+</div>
