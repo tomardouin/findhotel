@@ -4,8 +4,13 @@
 @import "form_legend_clear";
 @import "navbar";
 @import "home";
+@import "card";
 
 .body-container{
     margin-bottom: 60px;
     padding-bottom: 24px;
-  }
+}
+
+h1 {
+    text-align: center;
+}

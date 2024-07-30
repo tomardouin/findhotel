@@ -14,6 +14,9 @@
   </head>
 
   <body class="body-container <%= 'full-page' if controller_name == 'pages' && action_name == 'home' %>">
+    <% unless controller_name == "pages" %>
+      <%= render 'shared/navbar' %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
